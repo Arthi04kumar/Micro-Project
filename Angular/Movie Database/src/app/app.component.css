@@ -1,0 +1,63 @@
+
+header {
+    background-color:teal;
+    color:white;
+    padding: 8px ;
+    text-align: center;
+  }
+  
+  h1, h2 {
+    margin: 0;
+    padding: 0.5em;
+    text-align: center;
+  }
+  
+  .form {
+    width:50%;
+    margin: 5px;
+    padding-left: 50px;
+    background-color:lavender;
+    border-radius: 2px;
+  }
+  
+  form label {
+    display:block;
+    margin: 5px 0;
+    
+  }
+  
+  form input {
+    width: 50%;
+    padding: 8px;
+    margin: 10px 0;
+  }
+  
+  button {
+    display: inline-block;
+    padding: 10px 20px;
+    color: rgb(6, 6, 6);
+    background-color:pink;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: rgb(218, 54, 81);
+  }
+  
+  table {
+    width: 50%;
+    border-collapse: collapse;
+    border-style: groove;
+  }
+  
+  table, th, td {
+    border: 1px Solid black;
+  }
+  
+  th, td {
+    padding: 10px;
+    text-align: center;
+  }
+  

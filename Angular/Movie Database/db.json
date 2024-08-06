@@ -1,0 +1,39 @@
+{
+  "movies": [
+    {
+      "id": "2",
+      "title": "premalu",
+      "director": "Girish",
+      "year": "2024",
+      "genre": "love"
+    },
+    {
+      "id": "3",
+      "title": "premam",
+      "director": "Alphonse Puthren",
+      "year": "2015",
+      "genre": "love"
+    },
+    {
+      "id": "1",
+      "title": "Ok Kanmani",
+      "director": "Manirathnam",
+      "year": "2015",
+      "genre": "love"
+    },
+    {
+      "id": "5",
+      "title": "Dairy",
+      "director": "pandiyan",
+      "year": "2022",
+      "genre": "Horror"
+    },
+    {
+      "id": "6",
+      "title": "Leo",
+      "director": "Lokesh",
+      "year": "2023",
+      "genre": "Thriller"
+    }
+  ]
+}

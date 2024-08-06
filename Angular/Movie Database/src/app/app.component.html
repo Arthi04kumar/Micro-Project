@@ -1,0 +1,93 @@
+
+
+  <header>
+    <h1>Movie Database Management</h1>
+  </header>
+  
+  <div class="form">
+    <h2>Add a Movie</h2>
+    <form #myForm="ngForm">
+      <label for="id">id</label>
+      <input type="text" class="form-group" name="id" #id="ngModel" ngModel required pattern="[0-9]+">
+
+        <div *ngIf="id.touched">
+          <div *ngIf="id.errors?.['required']">
+            <b style="color: red;">id required</b>
+          </div>
+            <div *ngIf="title.errors?.['pattern']">
+              <b style="color: red;">id invalid</b>
+            </div>
+        </div>
+
+      <br> 
+      <label for="title">Title</label>
+      <input type="text" class="form-group" name="title" #title="ngModel" ngModel required pattern="[a-zA-z][a-zA-Z]+">
+
+        <div *ngIf="title.touched">
+          <div *ngIf="title.errors?.['required']">
+            <b style="color: red;">Title required</b>
+          </div>
+            <div *ngIf="title.errors?.['pattern']">
+              <b style="color: red;">Title invalid</b>
+            </div>
+        </div>
+
+      <br> 
+      <label for="director">Director</label>
+      <input type="text" name="director"#director="ngModel" ngModel required pattern="[a-zA-z][a-zA-Z]+">
+        
+      <div *ngIf="director.touched">
+        <div *ngIf="director.errors?.['required']">
+          <b style="color: red;"> Director Name required</b>
+        </div>
+          <div *ngIf="director.errors?.['pattern']">
+            <b style="color: red;">Director Name invalid</b>
+          </div>
+      </div>
+      <br> 
+      <label for="year">Year</label>
+      <input  type="text" name="year"#year="ngModel" ngModel required pattern="[0-9]+">
+        
+      <div *ngIf="year.touched">
+        <div *ngIf="year.errors?.['required']">
+          <b style="color: red;">Year required</b>
+        </div>
+          <div *ngIf="year.errors?.['pattern']">
+            <b style="color: red;">Year invalid</b>
+          </div>
+      </div>
+      <br>
+      <label for="year">genre</label>
+      <input  type="text" name="genre"#genre="ngModel" ngModel required pattern="[a-zA-z][a-zA-Z]+">
+        
+      <div *ngIf="genre.touched">
+        <div *ngIf="genre.errors?.['required']">
+          <b style="color: red;">genre required</b>
+        </div>
+          <div *ngIf="year.errors?.['pattern']">
+            <b style="color: red;">genre invalid</b>
+          </div>
+      </div>
+      
+      <br><br>
+      <button type="submit"(click)=insertMovie(myForm.value) >Insert</button>
+      &nbsp;&nbsp;
+      <button type="submit" (click)=updateMovie(myForm.value)>Update</button>
+      &nbsp;&nbsp;
+      <button type="submit" (click)=deleteMovie(myForm.value)>Delete</button>
+      &nbsp;&nbsp;
+      <button type="submit"(click)=findMovie(myForm.value)>Find</button>
+      &nbsp;&nbsp;
+      <button type="submit"(click)=findAllMovie()>Find All</button>
+    </form>
+  </div>
+  
+ <h3>{{result}}</h3>
+ <div style="width: 100%;" *ngIf="flag">
+  <table width="80%" align="center" class="table table-borderd">
+   <tr><th>title</th><th>director</th><th>year</th><th>Genre</th></tr> 
+    <tr *ngFor="let movie of movieArr ">
+        <td> {{movie.title}} </td><td> {{movie.director}} </td><td> {{movie.year}} </td> <td> {{movie.genre}} </td>
+    </tr>
+ </table>
+ </div>
